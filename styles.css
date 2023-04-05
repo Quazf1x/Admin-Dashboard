@@ -1,0 +1,62 @@
+:root{
+  --header-color:#31323a;/*#112D4E;*/
+  --nav-color: #6d9885;/*#3F72AF;*/
+  --card-color:#f7f7f7;/*#F9F7F7; */
+  --main-color:#f2e7d5;/*#DBE2EF; */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100svh;
+}
+
+#header{
+  background-color: var(--header-color);
+  grid-column: span 2;
+}
+#wrapper{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 4fr ;
+  grid-template-rows: 80px 1fr;
+}
+#navigation-panel{
+  background-color: var(--nav-color);
+}
+
+#main-content{
+  background-color: var(--main-color);
+  display: grid;
+  gap: 20px;
+  grid-template-columns:  repeat(2,minmax(180px,1fr)) 3fr 1fr ;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-column: 2/3;
+  padding: 25px 25px;
+}
+
+.cell{
+  background-color: var(--card-color);
+  height: 100%;
+}
+
+#sales-graph{
+  grid-column: span 2 ;
+  height: 400px;
+}
+
+#customers-tab,#orders-tab{
+  grid-row: 2/3;
+}
+
+#traffic-graph{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+#user-section{
+  grid-column: span 3;
+  grid-row: span 2;
+}
