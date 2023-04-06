@@ -4,27 +4,64 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
 </head>
 <body>
-  <div id="wrapper">
-  <header id="header">
-    header
-  </header>
-  <nav id="navigation-panel">
-    nav
-  </nav>
-  <main id="main-content">
-    <div id="sales-graph" class="cell">1</div>
-    <div id="customers-tab" class="cell">2</div>
-    <div id="orders-tab" class="cell">3</div>
-    <div id="traffic-graph" class="cell">4</div>
-    <div id="user-section" class="cell">5</div>
-    <div id="avg-users" class="cell">6</div>
-    <div id="conversion-rate" class="cell">7</div>
-  </main>
+  <div id="page-wrapper">
+    <header id="header">
+      <h1>Dashboard</h1>
+      <button class="date-button">Feb 2023 <img src="img/check.svg"></button>
+    </header>
+
+    <section id="product-section">
+      <div class="product-card">
+        <img src="img/product1.svg">
+        <div>
+          <h3 class="product-number">178+</h3>
+          <span class="undertext">Save products</span>  
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img/product2.svg">
+        <div>
+          <h3 class="product-number">178+</h3>
+          <span class="undertext">Stock products</span>  
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img/product3.svg">
+        <div>
+          <h3 class="product-number">190+</h3>
+          <span class="undertext">Sales products</span>  
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="img/product4.svg">
+        <div>
+          <h3 class="product-number">12+</h3>
+          <span class="undertext">Job applications</span>  
+        </div>
+      </div>
+    </section>
+    
+    <nav class = "nav-big-panel">
+      
+    </nav>
+
+    <main id="content">
+      <div class="card">
+        
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </main>
   </div>
 </body>
 </html>
