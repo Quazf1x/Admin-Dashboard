@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>Admin Dashboard</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="app.js"></script>
@@ -19,32 +20,32 @@
       <button class="date-button main-business-btn">Feb 2023 <img src="img/check.svg"></button>
     </header>
 
-    <section id="product-section">
-      <div class="product-card current-product">
-        <img src="img/product1.svg">
+    <section id="category-section">
+      <div class="category-card current-category">
+        <img src="img/category1.svg">
         <div>
-          <h3 class="product-number">178+</h3>
+          <h3 class="category-number">178+</h3>
           <span class="undertext">Save products</span>  
         </div>
       </div>
-      <div class="product-card">
-        <img src="img/product2.svg">
+      <div class="category-card">
+        <img src="img/category2.svg">
         <div>
-          <h3 class="product-number">178+</h3>
+          <h3 class="category-number">178+</h3>
           <span class="undertext">Stock products</span>  
         </div>
       </div>
-      <div class="product-card">
-        <img src="img/product3.svg">
+      <div class="category-card">
+        <img src="img/category3.svg">
         <div>
-          <h3 class="product-number">190+</h3>
+          <h3 class="category-number">190+</h3>
           <span class="undertext">Sales products</span>  
         </div>
       </div>
-      <div class="product-card">
-        <img src="img/product4.svg">
+      <div class="category-card">
+        <img src="img/category4.svg">
         <div>
-          <h3 class="product-number">12+</h3>
+          <h3 class="category-number">12+</h3>
           <span class="undertext">Job applications</span>  
         </div>
       </div>
@@ -105,11 +106,58 @@
 
     <main id="content">
       <div class="card">
-        
+        <div class="card-top">
+          <h2>Reports</h2>
+          <img src="img/dots.svg">
+        </div>
       </div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+        <div class="card-top">
+          <h2>Analytics</h2>
+          <img src="img/dots.svg">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <h2>Recent orders</h2>
+          <img src="img/dots.svg">
+        </div>
+      </div>
+      <div id="product-card" class="card">
+        <div class="card-top">
+          <h2>Top Selling Products</h2>
+          <img src="img/dots.svg">
+        </div>
+        <div class="product-wrapper">
+          <img src="img/products/shoe.png">
+          <div class="product-info">
+            <span> Nike Revolution 6 NN </span>
+            <div class="product-stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <span> $87</span>
+          </div>
+        </div>
+        <hr>
+        <div class="product-wrapper">
+          <img src="img/products/applewatch.png">
+          <div class="product-info">
+            <span> Apple Watch </span>
+            <div class="product-stars">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <span> $399</span>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </body>

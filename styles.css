@@ -77,26 +77,27 @@ body{
   margin-left: 10px;
 }
 
-#product-section{
+#category-section{
   align-items: center;
   grid-area: 2 / 2 / 3 /3;
   display: flex;
   justify-content: space-between;
 }
 
-.product-card{
+.category-card{
   align-items: center;
   background-color: var(--card-menu-color);
   border-radius: var(--border-radius);
   display: flex;
+  cursor: pointer;
   justify-content: center;
   width: 22%;
   height: 100%;
 }
-.product-card div{
+.category-card div{
   margin-left: 25px;
 }
-.current-product{
+.category-card:hover{
   outline: 1px solid black;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -193,7 +194,12 @@ body{
 
 #account-info span{
   display: block;
+  cursor: pointer;
   font-size: .75rem;
+}
+
+#account-info span:hover{
+  text-decoration: underline;
 }
 
 .profile-pic{
@@ -216,4 +222,47 @@ body{
 .card{
   background-color: var(--card-menu-color);
   border-radius: var(--border-radius);
+}
+
+.card-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.card-top h2{
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+#product-card hr{
+  background-color: #454A56;
+  border: none;
+  height: 1px;
+  margin: 22px auto;
+  width: 90%;
+}
+.product-wrapper{
+  align-items: center;
+  display: flex;
+  padding-left: 25px;
+}
+
+.product-info{
+  margin-left: 20px;
+}
+
+.product-stars{
+  margin: 6px 0;
+  color: #ff69b45a; /*i still don't know how to make colors from variables transparent... */
+}
+
+.checked{
+  color:var(--brand-secondary--color);
+}
+.product-wrapper img{
+  border-radius: 10px;
+  object-fit: cover;
+  object-position:bottom;
+  height: 96px;
+  width: 96px;
 }
