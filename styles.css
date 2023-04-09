@@ -11,6 +11,7 @@
   --btn-active:#302BFF;
   --text-color:#ffffff;
   --grey-text-color:#abadbf;
+  --horizontal-line-color:#454A56;
 
   --brand-primary--color:#6254FF;
   --brand-secondary--color:#ff69b4;
@@ -53,6 +54,9 @@ body{
   height: 1077px;
   padding-right: 30px;
 }
+
+/*HEADER*/
+
 #header{
   grid-column: 2/3;
   height: 46px;
@@ -84,6 +88,8 @@ body{
   justify-content: space-between;
 }
 
+/*CATEGORIES ROW*/
+
 .category-card{
   align-items: center;
   background-color: var(--card-menu-color);
@@ -106,6 +112,13 @@ body{
   font-size: .875rem;
   font-weight: 400;
 }
+
+.current-category{
+  color: var(--brand-primary--color);
+}
+
+/*NAVBAR*/
+
 #navbar{
   background-color: var(--card-menu-color);
   grid-row: 1 / 4;
@@ -168,9 +181,7 @@ body{
   padding: 1px 5px;
   margin-left: 30px;
 }
-.current-category{
-  color: var(--brand-primary--color);
-}
+
 #navbar-upgrade{
   align-items: center;
   display: flex;
@@ -204,10 +215,13 @@ body{
 
 .profile-pic{
   border-radius: 12px;
+  cursor: pointer;
   object-fit: cover;
   height: 45px;
   width: 43px;
 }
+
+/*MAIN DASHBOARD CONTENT*/
 
 #content{
   display: grid;
@@ -230,12 +244,88 @@ body{
   padding: 25px;
 }
 
+.card-top img{
+  cursor: pointer;
+}
+
 .card-top h2{
   font-weight: 400;
   font-size: 1.125rem;
 }
+
+/*RECENT ORDERS CARD*/
+
+#recent-order-card{
+  padding-bottom: 20px;
+}
+
+table, td, th {
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+table{
+  width: 93%;
+  margin: 0 auto;
+}
+
+td, th{
+  text-align: center;
+  vertical-align:middle;
+}
+.td:first-child,th:first-child{
+  width: 15%;
+}
+th{
+  padding: 15px 0;
+  border-bottom: 1px solid var(--horizontal-line-color);
+}
+
+td{
+  padding: 10px 0;
+}
+
+td:first-child{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+td:nth-child(2),th:nth-child(2){
+  text-align: left;
+}
+
+td:last-child{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+tr:not(:first-child):nth-child(odd){
+  background-color: var(--background-color);
+}
+
+td img{
+  vertical-align:middle;
+  margin-right: 10px;
+}
+
+td:nth-child(4),th:nth-child(4){
+  display: flex;
+  justify-content: center;
+}
+
+.total-order{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+/*PRODUCT CARD*/
+
 #product-card hr{
-  background-color: #454A56;
+  background-color: var(--horizontal-line-color);
   border: none;
   height: 1px;
   margin: 22px auto;
@@ -251,6 +341,13 @@ body{
   margin-left: 20px;
 }
 
+.product-name{
+  cursor: pointer;
+}
+
+.product-name:hover{
+  text-decoration: underline;
+}
 .product-stars{
   margin: 6px 0;
   color: #ff69b45a; /*i still don't know how to make colors from variables transparent... */
@@ -259,10 +356,21 @@ body{
 .checked{
   color:var(--brand-secondary--color);
 }
-.product-wrapper img{
+.product-img-wrapper{
   border-radius: 10px;
-  object-fit: cover;
-  object-position:bottom;
+  overflow: hidden;
   height: 96px;
   width: 96px;
+}
+.product-wrapper img{
+  cursor: pointer;
+  object-fit: cover;
+  object-position:bottom;
+  height: 100%;
+  width: 100%;
+  transition: all .25s;
+}
+
+.product-wrapper img:hover{
+  transform: scale(1.2);
 }
