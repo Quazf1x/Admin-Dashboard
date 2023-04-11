@@ -253,6 +253,13 @@ body{
   font-size: 1.125rem;
 }
 
+/*GRADIENT GRAPH*/
+
+.chart-wrapper{
+  margin-left: 20px;
+  width: 96%;
+  height: 80%;
+}
 /*RECENT ORDERS CARD*/
 
 #recent-order-card{
