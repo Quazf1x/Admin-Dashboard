@@ -1,9 +1,11 @@
 const lineGradientGraph = document.getElementById('line-chart').getContext("2d");
+const donutChart = document.getElementById('donut-chart').getContext('2d');
 
 let gradientBg = lineGradientGraph.createLinearGradient(0,0,700,0);
 gradientBg.addColorStop(0,'rgba(58,54,219,48%)');
 gradientBg.addColorStop(1,'rgba(255,105,180,35%)');
 
+ /*Gradient chart(the first one)*/
   new Chart(lineGradientGraph, {
     type: 'line',
     data: {
@@ -30,6 +32,24 @@ gradientBg.addColorStop(1,'rgba(255,105,180,35%)');
       },
       tooltip:{
         backgroundColor:'rgba(171,173,191,255)',
+        displayColors:false,
+        padding:10,
+        titleColor:'black',
+        titleFont: {
+          size: 12,
+          weight:400
+        },
+        bodyAlign:'center',
+        bodyFont: {
+          size: 16,
+          weight:500
+        },
+        bodyColor:'black',
+        callbacks:{
+          title:() => {
+            return 'Sales'
+          }
+        }
       }},
       scales: {
         x:{
@@ -50,4 +70,35 @@ gradientBg.addColorStop(1,'rgba(255,105,180,35%)');
       responsive:true,
       maintainAspectRatio:false,
     },
+  });
+
+
+
+
+  let sale = 40;
+  let distribute = 10;
+  let returnValue = 20;
+
+  new Chart(donutChart, {
+    type: 'doughnut',
+    data: {
+      labels: ['Sale', 'Distribute', 'Return'],
+      datasets: [{
+        label: '# of Votes',
+        borderRadius:100,
+        data: [sale, distribute, returnValue, 100-(sale+distribute+returnValue)],
+        spacing:-25,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          display: false, 
+          beginAtZero: true
+        }
+      },
+      responsive:true,
+      maintainAspectRatio:false,
+    }
   });
