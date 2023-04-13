@@ -72,12 +72,21 @@ gradientBg.addColorStop(1,'rgba(255,105,180,35%)');
     },
   });
 
-
-
-
   let sale = 40;
   let distribute = 10;
   let returnValue = 20;
+
+  
+  const sliceThickness = {
+    id: 'sliceThickness',
+    beforeDraw(chart,plugins){
+
+      let sliceThicknessPixel = [400,370,340,300];
+      sliceThicknessPixel.forEach((thickness,index) =>{
+      chart.getDatasetMeta(0).data[index].innerRadius = (chart.chartArea.width / thickness)*100;
+      })
+    }
+  };
 
   new Chart(donutChart, {
     type: 'doughnut',
@@ -85,20 +94,25 @@ gradientBg.addColorStop(1,'rgba(255,105,180,35%)');
       labels: ['Sale', 'Distribute', 'Return'],
       datasets: [{
         label: '# of Votes',
-        borderRadius:100,
         data: [sale, distribute, returnValue, 100-(sale+distribute+returnValue)],
-        spacing:-25,
-        borderWidth: 1
+        backgroundColor:['#605CFF','#2FE5A7','#FF69B4','#ABADBF'],
+        borderWidth: 0,
       }]
     },
     options: {
-      scales: {
-        y: {
-          display: false, 
-          beginAtZero: true
-        }
-      },
       responsive:true,
       maintainAspectRatio:false,
-    }
+      plugins:{
+        legend:{
+          position:'bottom',
+          labels:{
+            usePointStyle:true,
+            pointStyle:'rectRounded',
+            padding:40,
+            color:'#ABADBF'
+          }
+        }
+      }
+    },
+    plugins:[sliceThickness]
   });

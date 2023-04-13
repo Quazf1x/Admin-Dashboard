@@ -260,6 +260,12 @@ body{
   width: 96%;
   height: 80%;
 }
+
+.doughnut-chart-wrapper{
+  margin-left: 20px;
+  width: 90%;
+  height: 80%;
+}
 /*RECENT ORDERS CARD*/
 
 #recent-order-card{
@@ -380,4 +386,43 @@ td:nth-child(4),th:nth-child(4){
 
 .product-wrapper img:hover{
   transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1160px){
+
+  #page-wrapper{
+  grid-template-columns: 75px 1fr;
+  }
+  .navbar-category-name{
+    display: none;
+  }
+
+  #navbar-logo{
+    justify-content: flex-start;
+    margin-left: 7px;
+  }
+
+  .navbar-notifications{
+    margin: 0;
+  }
+
+  #navbar-upgrade{
+    display: none;
+  }
+
+  #account-info {
+    flex-direction: column;
+    justify-content: flex-end;
+    margin:0;
+    margin-bottom:20px;
+  }
+
+  #account-info img{
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  #account-info span{
+    display: none;
+  }
 }
